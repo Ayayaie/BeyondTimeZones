@@ -18,7 +18,7 @@ ___
 - Implémentation de l'actualisation des heures - à voir
 ___
 ## Le Cahier des charges
-*Projet Heure_Reelle* => présentation du projet et des contraintes du projet
+*Projet Heure_Reelle.pdf* => présentation du projet et des contraintes du projet
 Le projet est un site web qui sera fait à l'aide d'html/css, du php et du javascript (si l'on en a besoin).
 ### Les fichiers qui forment le site :
   - la page d'**acceuil** qui présentera le formulaire en charge de récupérer les informations nécessairent pour le traitement des données
