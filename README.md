@@ -1,15 +1,18 @@
-# BeyondTimeZones par ***Efflam*** et ***Nicolas***
+# BeyondTimeZones par ***Efflam*** et ***Nicolas*** 
 Site qui permet de connaître l'heure qui l'est en dehors des fuseaux horaires.
 ___
 ## Fonctions nécessaires
-- fonction qui rend la latitude de l'utilisateur - *avec javascript*
-- fonction qui rend avec la latitude l'écart en seconde avec la latitude de Greenwich (UTC) - *avec php*
-- fonction qui converti des secondes en format Heures:Minutes:Secondes dans un tableau - *à voir*
-- fonction qui rend la valeur du fuseau horraire de l'utilisateur (ex: pour GMT+8, il rend 8) 
-- fonction qui permet de soustraire une heure à une autre
+1. fonction qui rend la latitude de l'utilisateur - *avec javascript*
+2. fonction qui rend avec la latitude l'écart en seconde avec la latitude de Greenwich (UTC) - *avec php*
+3. fonction qui converti des secondes en format Heures:Minutes:Secondes dans un tableau - *à voir*
+4. fonction qui rend la valeur du fuseau horraire de l'utilisateur (ex: pour GMT+8, il rend 8) 
+5. fonction qui permet de soustraire une heure à une autre
 ___
-## Répartition des tâches
-
+## Répartition des tâches actuel
+- Efflam :
+- [ ] Fonction n°2
+- Nicolas :
+- [ ] Fonction n°1
 ___
 ## Problèmes
 - Implémentation de l'actualisation des heures - à voir
@@ -34,4 +37,6 @@ ___
      - la page de **traitement** : *traitement.html*
      - le fichier **css** : *style.css*
    - 
-2.
+2. 
+
+![CLOCK](clock.gif) 
