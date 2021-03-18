@@ -10,7 +10,8 @@ ___
 ___
 ## Répartition des tâches actuel
 - Efflam :
-- [ ] Fonction n°2
+- [ ] Fonction n°2 => algorithme terminé
+- [ ] Fonction n°3
 - Nicolas :
 - [ ] Fonction n°1
 ___
