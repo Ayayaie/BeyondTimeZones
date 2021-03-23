@@ -7,6 +7,7 @@ ___
 3. fonction qui converti des secondes en format Heures:Minutes:Secondes dans un tableau - *à voir*
 4. fonction qui rend la valeur du fuseau horraire de l'utilisateur (ex: pour GMT+8, il rend 8) 
 5. fonction qui permet de soustraire une heure à une autre
+6. fonction qui récupère l'heure de la machine de l'utilisateur
 ___
 ## Répartition des tâches actuel
 - Efflam :
@@ -14,6 +15,7 @@ ___
 - [ ] Fonction n°3
 - Nicolas :
 - [x] Fonction n°1, elle est constituée de getLocation() et getLongitude().
+- [ ] Fonction n°6
 ___
 ## Problèmes
 - Implémentation de l'actualisation des heures - à voir
