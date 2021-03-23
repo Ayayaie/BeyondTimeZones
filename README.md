@@ -13,7 +13,7 @@ ___
 - [ ] Fonction n°2 => algorithme terminé
 - [ ] Fonction n°3
 - Nicolas :
-- [ ] Fonction n°1
+- [x] Fonction n°1, elle est constituée de getLocation() et getLongitude().
 ___
 ## Problèmes
 - Implémentation de l'actualisation des heures - à voir
