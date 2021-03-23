@@ -11,10 +11,10 @@ ___
 ___
 ## Répartition des tâches actuel
 - Efflam :
-- [ ] Fonction n°2 => algorithme terminé
+- [x] Fonction n°2, elle est constituée de ecartSeconde(longitude)
 - [ ] Fonction n°3
 - Nicolas :
-- [x] Fonction n°1, elle est constituée de getLocation() et getLongitude().
+- [x] Fonction n°1, elle est constituée de getLocation() et getLongitude(position).
 - [ ] Fonction n°6
 ___
 ## Problèmes
@@ -39,7 +39,6 @@ ___
      - la page d'**acceuil** : *acceuil.html*
      - la page de **traitement** : *traitement.html*
      - le fichier **css** : *style.css*
-   - 
-2. 
 
+___
 ![CLOCK](clock.gif) 
