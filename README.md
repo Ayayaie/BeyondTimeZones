@@ -2,8 +2,8 @@
 Site qui permet de connaître l'heure qui l'est en dehors des fuseaux horaires.
 ___
 ## Fonctions nécessaires
-1. fonction qui rend la latitude de l'utilisateur - *avec javascript*
-2. fonction qui rend avec la latitude l'écart en seconde avec la latitude de Greenwich (UTC) - *avec php*
+1. fonction qui rend la longitude de l'utilisateur - *avec javascript*
+2. fonction qui rend avec la longitude l'écart en seconde avec la longitude de Greenwich (UTC) - *avec php*
 3. fonction qui converti des secondes en format Heures:Minutes:Secondes dans un tableau - *à voir*
 4. fonction qui rend la valeur du fuseau horraire de l'utilisateur (ex: pour GMT+8, il rend 8) 
 5. fonction qui permet de soustraire une heure à une autre
