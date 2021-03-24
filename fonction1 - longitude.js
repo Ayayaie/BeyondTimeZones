@@ -5,7 +5,7 @@ function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(getLongitude);
   } else { 
-    x.innerHTML = "La géolocation n'est pas compatible avec ce navigateur, cheh.";
+    x.innerHTML = "La géolocation n'est pas compatible avec ce navigateur.";
   }
 }
 
