@@ -8,11 +8,13 @@ ___
 4. fonction qui rend la valeur du fuseau horraire de l'utilisateur (ex: pour GMT+8, il rend 8) 
 5. fonction qui permet de soustraire une heure à une autre
 6. fonction qui récupère l'heure de la machine de l'utilisateur
+7. fonction qui vérifie la validitée de la longitude [-180;180]
 ___
 ## Répartition des tâches actuel
 - Efflam :
 - [x] Fonction n°2, elle est constituée de ecartSeconde(longitude)
-- [ ] Fonction n°3
+- [x] Fonction n°3, elle est constituée de conversionHMS_objects(temps) et conversionHMS(temps)
+- [x] Fonction n°7
 - Nicolas :
 - [x] Fonction n°1, elle est constituée de getLocation() et getLongitude(position).
 - [ ] Fonction n°6
