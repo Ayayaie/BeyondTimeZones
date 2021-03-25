@@ -9,15 +9,17 @@ ___
 5. fonction qui permet de soustraire une heure à une autre
 6. fonction qui récupère l'heure de la machine de l'utilisateur
 7. fonction qui vérifie la validitée de la longitude [-180;180]
+8. fonction qui soustrait deux valeurs de secondes
 ___
 ## Répartition des tâches actuel
 - Efflam :
 - [x] Fonction n°2, elle est constituée de ecartSeconde(longitude)
 - [x] Fonction n°3, elle est constituée de conversionHMS_objects(temps) et conversionHMS(temps)
-- [x] Fonction n°7
+- [x] Fonction n°7, elle est constituée de verifLongitude(longitude)
 - Nicolas :
 - [x] Fonction n°1, elle est constituée de getLocation() et getLongitude(position).
-- [ ] Fonction n°6
+- [x] Fonction n°6, elle est constituée de heure()
+- [ ] Fonciton n°8
 ___
 ## Problèmes
 - Implémentation de l'actualisation des heures - à voir
