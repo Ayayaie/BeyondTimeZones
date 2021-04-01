@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id="heure"></p>
+	<script>
+	var rep = document.getElementById("heure");
+    
+    function heure() {
+	     date = new Date;
+         g = date.getTimezoneOffset()/-60;
+	     h = date.getHours();
+	     if(h<10)
+	     {
+	             h = "0"+h;
+	     }
+	     m = date.getMinutes();
+	     if(m<10)
+	     {
+	             m = "0"+m;
+	     }
+	     s = date.getSeconds();
+	     if(s<10)
+	     {
+	             s = "0"+s;
+	     }
+         if(g<=0)
+         {
+	     	resultat = h+':'+m+':'+s+':'+g;
+         }
+         else
+         {
+	     	resultat = h+':'+m+':'+s+':+'+g;
+         }
+         rep.innerHTML = resultat
+	     return resultat;
+	}
+    
+    window.onload=function(){
+	setInterval("heure()", 1000)
+	}
+	</script>
+</body>
+</html>
