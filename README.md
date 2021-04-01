@@ -22,7 +22,7 @@ ___
 - [x] Fonciton n°5, nous n'avons pas eu besoin de fonction pour cela
 ___
 ## Problèmes
-- Implémentation de l'actualisation des heures - à voir
+- Implémentation de l'actualisation des heures - *Fait dans le fichier html actualisation_heure.html*
 ___
 ## Le Cahier des charges
 *Projet Heure_Reelle.pdf* => présentation du projet et des contraintes du projet
