@@ -6,7 +6,7 @@ ___
 2. fonction qui rend avec la longitude l'écart en seconde avec la longitude de Greenwich (UTC) - *avec php*
 3. fonction qui converti des secondes en format Heures:Minutes:Secondes dans un tableau - *à voir*
 4. fonction qui rend la valeur du fuseau horraire de l'utilisateur (ex: pour GMT+8, il rend 8) 
-5. fonction qui actualise une partie de la page
+5. code qui actualise une partie de la page
 6. fonction qui récupère l'heure de la machine de l'utilisateur
 7. fonction qui vérifie la validitée de la longitude [-180;180]
 ___
@@ -19,7 +19,7 @@ ___
 - Nicolas :
 - [x] Fonction n°1, elle est constituée de getLocation() et getLongitude(position).
 - [x] Fonction n°6, elle est constituée de heure()
-- [x] Fonciton n°5, nous n'avons pas eu besoin de fonction pour cela
+- [x] Code n°5, nous n'avons pas eu besoin de fonction pour cela
 ___
 ## Problèmes
 - Implémentation de l'actualisation des heures - *Fait dans le fichier html actualisation_heure.html*
