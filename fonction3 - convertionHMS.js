@@ -39,3 +39,4 @@ function conversionHMS(temps) {
     }
 	return resultat;
 }
+
