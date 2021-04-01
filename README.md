@@ -9,18 +9,17 @@ ___
 5. fonction qui actualise une partie de la page
 6. fonction qui récupère l'heure de la machine de l'utilisateur
 7. fonction qui vérifie la validitée de la longitude [-180;180]
-8. 
 ___
 ## Répartition des tâches actuel
 - Efflam :
 - [x] Fonction n°2, elle est constituée de ecartSeconde(longitude)
 - [x] Fonction n°3, elle est constituée de conversionHMS_objects(temps) et conversionHMS(temps)
 - [x] Fonction n°7, elle est constituée de verifLongitude(longitude)
-- [ ] Fonction n°4
+- [x] Fonction n°4, elle est directement implémentée avec la fonction heure
 - Nicolas :
 - [x] Fonction n°1, elle est constituée de getLocation() et getLongitude(position).
 - [x] Fonction n°6, elle est constituée de heure()
-- [ ] Fonciton n°5
+- [x] Fonciton n°5, nous n'avons pas eu besoin de fonction pour cela
 ___
 ## Problèmes
 - Implémentation de l'actualisation des heures - à voir
