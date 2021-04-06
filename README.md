@@ -16,6 +16,7 @@ ___
 - [x] Fonction n°3, elle est constituée de conversionHMS_objects(temps) et conversionHMS(temps)
 - [x] Fonction n°7, elle est constituée de verifLongitude(longitude)
 - [x] Fonction n°4, elle est directement implémentée avec la fonction heure
+- [x] Fonction n°8, elle est constituée de heureUTC()
 - Nicolas :
 - [x] Fonction n°1, elle est constituée de getLocation() et getLongitude(position).
 - [x] Fonction n°6, elle est constituée de heure()
