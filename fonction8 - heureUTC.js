@@ -20,7 +20,7 @@ function heureUTC() {
      {
      	if (g>h) 
         {
-        	h2 = 24-(Math.abs(g)-h)
+        	h2 = 24-(g-h)
             resultat = h2+':'+m+':'+s+':+'+g;
      	}
         if (g<h) 
