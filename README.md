@@ -36,7 +36,7 @@ Le projet est un site web qui sera fait à l'aide d'html/css, du php et du javas
     - la différence de temps entre ces deux heures
     - *plus à déterminer*
   - le fichier **css** qui regroupera les styles 
-  - utilisation de l'api *Leaflet* pour génerer une cart *opeenstreetmap*
+  - utilisation de l'api *Leaflet* pour génerer une carte *opeenstreetmap*
   - *si le temps nous le permet, d'autres pages pourront être ajoutées*
 ___
 ## Les étapes à suivre
