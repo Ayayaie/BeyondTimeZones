@@ -23,6 +23,7 @@ ___
 - [x] Fonction n°6, elle est constituée de heure()
 - [x] Code n°5, nous n'avons pas eu besoin de fonction pour cela
 - [x] Implémentation de l'api *Leaflet* et d'une carte
+- [ ] Continue d'implémenter les fonctions js sur la page de traitement
 ___
 ## Problèmes
 - Implémentation de l'actualisation des heures - *Fait dans le fichier html actualisation_heure.html*
