@@ -36,14 +36,16 @@ Le projet est un site web qui sera fait à l'aide d'html/css, du php et du javas
     - la différence de temps entre ces deux heures
     - *plus à déterminer*
   - le fichier **css** qui regroupera les styles 
+  - utilisation de l'api *Leaflet* pour génerer une cart *opeenstreetmap*
   - *si le temps nous le permet, d'autres pages pourront être ajoutées*
 ___
 ## Les étapes à suivre
-1. 1re Etape
-   - Création des fichiers essentiels du projet :
+1. Etape en cours
+   - Création des fichiers essentiels du projet et implémentation des fonctions:
      - la page d'**acceuil** : *acceuil.html*
      - la page de **traitement** : *traitement.html*
-     - le fichier **css** : *style.css*
+     - le fichier **css** : *style.css* 
+     - le fichier **script** : *script.js*
 
 ___
 ![CLOCK](clock.gif) 
