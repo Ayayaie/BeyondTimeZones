@@ -1,0 +1,167 @@
+/* Fichier CSS pour la mise en forme du contenu de index.php */
+
+body {
+	font-family: "Montserrat", "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
+#map {
+	position: absolute; 
+	top: 0; right: 0; bottom: 0; left: 0;
+}
+
+.bg-menu {
+	position: absolute; 
+	top: 0; right: 60%; bottom: 0; left: 0;
+	background-color:#666666; 
+    opacity: 0.8;
+}
+
+.menu {
+	position: absolute; 
+	top: 0; right: 60%; bottom: 0; left: 0;
+}
+
+#heures {
+	position: absolute; 
+	top: 6%; right: 3%; bottom: 80%; left: 6%;
+	background-color:#555555; 
+	opacity: .85;
+	border-radius: 10px;
+}
+
+#heure1, #heure2 {
+	color:white;
+	font-size: calc(.6vw + 6.5vh);
+	font-weight: bold;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.H1 {
+	position: absolute; 
+	top: 1%; right: 51%; bottom: 1%; left: 1%;
+}
+
+.H2 {
+	position: absolute; 
+	top: 0%; right: 1%; bottom: 1%; left: 51%;
+}
+
+.vl {
+	background-color: white;
+	position: absolute; 
+	top: 7%; right: 49.7%; bottom: 7%; left: 49.7%;
+	border-radius: 10px;
+}
+
+strong {
+	border: 1px solid red;
+}
+
+h1 {
+	color:red;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+h2 {
+	color:white;
+	font-weight: bold;
+	margin-left: 20px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: calc(.1vw + 1.5vh);
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+}
+
+a:link {
+  color: #265301;
+}
+
+a:visited {
+  color: #437A16;
+}
+
+a:focus {
+  border-bottom: 1px solid;
+  background: #BAE498;
+}
+
+a:hover {
+  border-bottom: 1px solid;     
+  background: #CDFEAA;
+}
+
+a:active {
+  background: #265301;
+  color: #CDFEAA;
+}
+
+.important {
+	color:blue;
+	font-weight: bold;
+}
+
+td {
+	text-align: center;
+}
+
+.bouton {
+	display: inline-block;
+	border-radius: 10px;
+	background-color: #228B22;
+	border: none;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 28px;
+	padding: 20px;
+	width: 220px;
+	transition: all 0.5s;
+	cursor: pointer;
+	vertical-align:middle
+}
+
+.bouton span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+.bouton span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+.bouton:hover span {
+	padding-right: 25px;
+}
+
+.bouton:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+
+.bt {
+	text-align: center; 
+	margin-top: 28%;
+}
+
+#latlon {
+	color:white;
+	font-family: 'Montserrat', sans-serif;
+	font-size: calc(.1vw + 1.5vh);
+	margin-top: 3%; margin-left: 10%;
+}
+
+#lon, #e_h, #e_m , #e_s {
+	opacity: 0;
+}
