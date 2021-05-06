@@ -9,6 +9,8 @@ ___
 5. code qui actualise une partie de la page
 6. fonction qui récupère l'heure de la machine de l'utilisateur
 7. fonction qui vérifie la validitée de la longitude [-180;180]
+8. fonction qui donne l'heure universelle UTC
+9. fonction qui convertie des heures, minutes, secondes en secondes simplement
 ___
 ## Répartition des tâches actuel
 - Efflam :
@@ -17,16 +19,20 @@ ___
 - [x] Fonction n°7, elle est constituée de verifLongitude(longitude)
 - [x] Fonction n°4, elle est directement implémentée avec la fonction heure
 - [x] Fonction n°8, elle est constituée de heureUTC()
-- [x] Gérer le calcul d'heures lors du calcul de l'heure géographique, il faut faire le calcul en seconde puis le convertire en format HH:MM:SS
+- [x] Gérer le calcul d'heures lors du calcul de l'heure géographique, il faut faire le calcul en seconde puis le convertire en format HH:MM:SS, fonction n°9 conversionS()
+- [ ] Compiler les fonctions qui sont sur la page *traitement.html* vers *script.js*
 - Nicolas :
 - [x] Fonction n°1, elle est constituée de getLocation() et getLongitude(position).
 - [x] Fonction n°6, elle est constituée de heure()
 - [x] Code n°5, nous n'avons pas eu besoin de fonction pour cela
 - [x] Implémentation de l'api *Leaflet* et d'une carte
 - [x] Continue d'implémenter les fonctions js sur la page de traitement
+- [x] Mettre à jour la carte *LeafLet* avec les nouvelles coordonnées, fonction panMap()
+- [ ] Faire apparaître l'écart de temps (en prenant en compte le fuseau horaire) sur la page traitement
 ___
 ## Problèmes
 - Implémentation de l'actualisation des heures - *Fait dans le fichier html actualisation_heure.html*
+- Mettre à jour la carte en fond avec les coordonnées, grâce à l'api *LeafLet* - *Résolu avec la fonction pan Map*
 ___
 ## Le Cahier des charges
 *Projet Heure_Reelle.pdf* => présentation du projet et des contraintes du projet
