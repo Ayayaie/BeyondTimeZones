@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>BeyondTimeZones</title>
+	<link rel="icon" href="http://primedepartamentos.com/images/icons/clock-icon.png">
+	<meta name="BeyondTimeZones" content="BeyondTimeZones">
+	<!-- importe la feuille de style -->
+	<link rel="stylesheet" href="./style.css">
+	<!-- importe une Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<!-- importe l'api Leaflet v.1.7.1 -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+	<script src="./script.js" type="text/javascript"></script>
+</head>
+<body>
+	<p id="lon"></p><p id="x"></p><p id="y"></p>
+	<div id="map"></div>
+	<div class="bg-menu"></div>
+	<div class="menu">
+		<section>
+			<p id="latlon"></p>
+			<div class="h" id="heures">
+				<article class="H1">
+					<h2>• Heure géographique :</h2>
+					<div id="heure1">--:--:--</div>
+				</article>
+				<div class="vl"></div>
+				<article class="H2">
+					<h2>• Heure actuelle :</h2>
+					<div id="heure2">--:--:--</div>
+				</article>
+			</div>
+			<div class="e" id="ecarts">
+				<article class="Ecart">
+					<h2>• Ecart :</h2>
+					<div id="ecart">--h --min --s</div>
+				</article>
+			</div>
+		</section>
+		<p id="UTC_"></p><p id="UTC"></p>
+	</div>
+	
+	<script>
+		//Variables d'affichage:
+		var latlon = document.getElementById("latlon");
+		var h1 = document.getElementById("heure1"); //Heure géographique
+		var h2 = document.getElementById("heure2"); //Heure actuelle
+		var ecart2 = document.getElementById("ecart");
+		var utc = document.getElementById("UTC");
+		
+		//Variables de stockage de valeurs:
+		var lon = document.getElementById("lon"); //Longitude utilisée pour le calcul de l'écart en secondes
+		var x = document.getElementById("x"); //Longitude pour charger la carte dans panMap()
+		var y = document.getElementById("y"); //Latitude pour charger la carte dans panMap()
+		
+		function heure() { //Fonction qui se charge de faire le calcul de toutes les heures affichées sur la page
+			date = new Date;
+			h = date.getHours(); hn = date.getHours();
+			m = date.getMinutes(); mn = date.getMinutes();
+			s = date.getSeconds(); sn = date.getSeconds();
+			g = date.getTimezoneOffset()/-60;
+			hr = h*3600+m*60+s;
+			ec = ecartSeconde(document.getElementById('lon').innerHTML);
+			if(h<10) {
+				h = "0"+h;
+			}
+			if(m<10) {
+				m = "0"+m;
+			}
+			if(s<10) {
+				s = "0"+s;
+			}
+			resultat = h+':'+m+':'+s;
+			h3 = h; m3 = m; s3 = s;
+			h2.innerHTML = resultat; //Affichage de l'heure actuelle
+			if (g>0) { //si le fuseau horaire est positif
+				if (g>h3) {
+					h4 = 24-(g-h3); hm = 24-(g-hn);
+					resultatutc = h4+':'+m3+':'+s3+' GMT+'+g;
+					heure_s = (hm*3600+mn*60+sn)+ec;
+				}
+				if (g<h3) {
+					h4 = h3-g; hm = hn-g;
+					resultatutc = h4+':'+m3+':'+s3+' GMT+'+g;
+					heure_s = (hm*3600+mn*60+sn)+ec;
+				}
+			}
+			if (g==0) { //si le fuseau horaire est nul
+				resultatutc = h3+':'+m3+':'+s3+' GMT';
+				heure_s = (hn*3600+mn*60+sn)+ec;
+			}
+			if (g<0) {//si le fuseau horaire est négatif
+				if (Math.abs(g)>(24-h3)) {
+					h4 = Math.abs(g)-(24-h3); hm = Math.abs(g)-(24-hn);
+					resultatutc = h4+':'+m3+':'+s3+' GMT'+g;
+					heure_s = (hm*3600+mn*60+sn)+ec;
+				}
+				if (Math.abs(g)<(24-h3)) {
+					h4 = h3-g; hm = hn-g;
+					resultatutc = h4+':'+m3+':'+s3+' GMT'+g;
+					heure_s = (hm*3600+mn*60+sn)+ec;
+				}
+			}
+			utc.innerHTML = "UTC: "+resultatutc; //Affichage de l'heure UTC
+			if (heure_s>86400) {
+				heure_s -= 86400;
+			}
+			h1.innerHTML = conversionHMS(heure_s); //Affichage de l'heure géographique
+			calculEcart(heure_s-hr); //Calcul de l'écart et son affichage
+		}
+		
+		function buildMap(lat,lon) { //Fonction qui charge leaflet dès l'ouverture de la page
+			var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', osmAttribution = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,' + ' <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+			osmLayer = new L.TileLayer(osmUrl, {maxZoom: 19, minZoom: 3, attribution: osmAttribution});
+			var map = new L.Map('map', { zoomControl: false });
+			map.setView(new L.LatLng(lat,lon), 3 );
+			map.addLayer(osmLayer);
+		}
+		
+		function panMap() { //Fonction qui se lance après que getLocation() ait été lancée
+			lat = parseFloat(document.getElementById('y').innerHTML, 10);
+			lon = parseFloat(document.getElementById('x').innerHTML, 10)-0.07; //Décale la carte
+			document.getElementById('map').innerHTML = "<div id='map2' style='width: 100%; height: 100%;'></div>";
+			var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', osmAttribution = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,' + ' <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+			osmLayer = new L.TileLayer(osmUrl, {maxZoom: 19, minZoom: 3, attribution: osmAttribution});
+			var map2 = new L.Map('map2', { zoomControl: false });
+			map2.setView([lat,lon], 12 );
+			map2.addLayer(osmLayer);
+		}
+		
+		buildMap(40,0) //La carte est chargée dès l'ouverture de la page
+	</script>
+</body>	
+</html>
