@@ -47,8 +47,8 @@
 		var h1 = document.getElementById("heure1");
 		var h2 = document.getElementById("heure2");
 		var ecart2 = document.getElementById("ecart");
-		var x = document.getElementById("x");
-		var y = document.getElementById("y");
+		var x = document.getElementById("x"); //Longitude pour charger la carte dans panMap()
+		var y = document.getElementById("y"); //Latitude pour charger la carte dans panMap()
 		var utc = document.getElementById("UTC");
 		
 		function conversionS() {
@@ -111,7 +111,7 @@
 			conversionHMS(heure_s-hr);
 		}
 		
-		function buildMap(lat,lon) {
+		function buildMap(lat,lon) { //Fonction qui charge leaflet dès l'ouverture de la page
 			var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', osmAttribution = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,' + ' <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
 			osmLayer = new L.TileLayer(osmUrl, {maxZoom: 19, minZoom: 3, attribution: osmAttribution});
 			var map = new L.Map('map', { zoomControl: false });
@@ -119,10 +119,10 @@
 			map.addLayer(osmLayer);
 		}
 		
-		function panMap() {
+		function panMap() { //Fonction qui se lance après que getLocation() ait été lancée
 			lat = parseFloat(document.getElementById('y').innerHTML, 10);
 			lon = parseFloat(document.getElementById('x').innerHTML, 10);
-			if (lon<0) { 
+			if (lon<0) { //Décale la carte
 				lon -= 0.07 
 			} else {
 				lon += 0.07
@@ -135,7 +135,7 @@
 			map2.addLayer(osmLayer);
 		}
 		
-		buildMap(40,0)
+		buildMap(40,0) //La carte est chargée dès l'ouverture de la page
 	</script>
 </body>	
 </html>
