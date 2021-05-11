@@ -20,7 +20,7 @@ ___
 - [x] Fonction n°4, elle est directement implémentée avec la fonction heure
 - [x] Fonction n°8, elle est constituée de heureUTC()
 - [x] Gérer le calcul d'heures lors du calcul de l'heure géographique, il faut faire le calcul en seconde puis le convertire en format HH:MM:SS, fonction n°9 conversionS()
-- [ ] Compiler les fonctions qui sont sur la page *traitement.html* vers *script.js*
+- [x] Compiler les fonctions qui sont sur la page *traitement.html* vers *script.js*
 - Nicolas :
 - [x] Fonction n°1, elle est constituée de getLocation() et getLongitude(position).
 - [x] Fonction n°6, elle est constituée de heure()
@@ -28,7 +28,8 @@ ___
 - [x] Implémentation de l'api *Leaflet* et d'une carte
 - [x] Continue d'implémenter les fonctions js sur la page de traitement
 - [x] Mettre à jour la carte *LeafLet* avec les nouvelles coordonnées, fonction panMap()
-- [ ] Faire apparaître l'écart de temps (en prenant en compte le fuseau horaire) sur la page traitement
+- [x] Faire apparaître l'écart de temps (en prenant en compte le fuseau horaire) sur la page traitement
+- [x] Commenter les fonctions *Java*
 ___
 ## Problèmes
 - Implémentation de l'actualisation des heures - *Fait dans le fichier html actualisation_heure.html*
