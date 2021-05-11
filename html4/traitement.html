@@ -42,23 +42,18 @@
 	</div>
 	
 	<script>
+		//Variables d'affichage:
 		var latlon = document.getElementById("latlon");
-		var lon = document.getElementById("lon");
 		var h1 = document.getElementById("heure1");
 		var h2 = document.getElementById("heure2");
 		var ecart2 = document.getElementById("ecart");
+		var utc = document.getElementById("UTC");
+		//Variables de stockage de valeurs:
+		var lon = document.getElementById("lon"); //Longitude utilisée pour le calcul de l'écart en secondes
 		var x = document.getElementById("x"); //Longitude pour charger la carte dans panMap()
 		var y = document.getElementById("y"); //Latitude pour charger la carte dans panMap()
-		var utc = document.getElementById("UTC");
 		
-		function conversionS() {
-			var h = Math.abs(document.getElementById('h').innerHTML);
-			var m = Math.abs(document.getElementById('m').innerHTML);
-			var s = Math.abs(document.getElementById('s').innerHTML);
-			return h*3600+m*60+s;
-		}
-		
-		function heure() {
+		function heure() { //Fonction qui se charge de faire le calcul de toutes les heures affichées sur la page
 			date = new Date;
 			h = date.getHours(); hn = date.getHours();
 			m = date.getMinutes(); mn = date.getMinutes();
@@ -77,7 +72,7 @@
 			}
 			resultat = h+':'+m+':'+s;
 			h3 = h; m3 = m; s3 = s;
-			h2.innerHTML = resultat;
+			h2.innerHTML = resultat; //Affichage de l'heure actuelle
 			if (g>0) {
 				if (g>h3) {
 					h4 = 24-(g-h3); hm = 24-(g-hn);
@@ -106,9 +101,9 @@
 					heure_s = (hn*3600+mn*60+sn)+ec;
 				}
 			}
-			utc.innerHTML = "UTC: "+resultatutc;
-			h1.innerHTML = conversionHMS2(heure_s);
-			conversionHMS(heure_s-hr);
+			utc.innerHTML = "UTC: "+resultatutc; //Affichage de l'heure UTC
+			h1.innerHTML = conversionHMS2(heure_s); //Affichage de l'heure géographique
+			conversionHMS(heure_s-hr); //Calcul de l'écart et son affichage
 		}
 		
 		function buildMap(lat,lon) { //Fonction qui charge leaflet dès l'ouverture de la page
